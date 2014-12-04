@@ -1,0 +1,40 @@
+body {
+  background: #eee;
+}
+
+.finance-list-income {
+  background:#fff;
+  padding: 0 20px 20px;
+  margin: 0 0 20px;
+  float:left;
+  width:48%;
+}
+.finance-list-expense {
+  background:#fff;
+  padding: 0 20px 20px;
+  margin: 0 0 20px;
+  float:right;
+  width:48%;
+}
+.finance-list-income h3,
+.finance-list-expense h3 {
+  float:left;
+}
+.finance-list-income .timing,
+.finance-list-expense .timing {
+  margin-top:20px;
+  float:left;
+  padding-left:10px;
+  line-height:28px;
+}
+.Income {
+  color:#23B116;
+}
+.Expense {
+  color: #B11623;
+}
+.new-finance {
+  background:#fff;
+  clear:both;
+  padding:20px;
+}
