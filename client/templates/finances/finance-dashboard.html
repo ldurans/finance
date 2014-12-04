@@ -1,0 +1,35 @@
+<template name="financeDashboard">
+{{#if currentUser}}
+<div class="dashboard-item jumbotron">
+  <div class="totals totals-week">
+    <h2 class="title">
+      Weekly: <span class="Income">£{{weeklyIncome}}</span> - <span class="Expense">£{{weeklyExpense}}</span> = {{{weeklyTotal}}}*
+    </h2>
+  </div>
+  <div class="totals totals-month">
+    <h2 class="title">
+      Monthly: <span class="Income">£{{monthlyIncome}}</span> - <span class="Expense">£{{monthlyExpense}}</span> = {{{monthlyTotal}}}*
+    </h2>
+  </div>
+  <div class="totals totals-annual">
+    <h2 class="title">
+      Annual: <span class="Income">£{{annualIncome}}</span> - <span class="Expense">£{{annualExpense}}</span> = {{{annualTotal}}}*
+    </h2>
+  </div>
+  <div>*Not including one-off items.</div>
+</div>
+<div class="dashboard-item">
+  <canvas id="financeGraphMonthly" width="300" height="300" style="float:left;"></canvas>
+</div>
+
+<script>
+$( document ).ready(function() {
+  //Get the context of the canvas element we want to select
+
+});
+
+</script>
+{{else}}
+Please log in to start using the finance app.
+{{/if}}
+</template>
