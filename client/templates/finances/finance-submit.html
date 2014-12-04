@@ -1,0 +1,44 @@
+<template name="financeSubmit">
+  <form class="main form new-finance">
+    <div class="form-group">
+      <label class="control-label" for="title">Title: *</label>
+      <div class="controls">
+        <input name="title" id="title" type="text" value="" placeholder="Your Title" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="financeType">Type: *</label>
+      <div class="controls">
+        <select name="financeType" id="financeType" class="form-control">
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="amount">Amount (£): *</label>
+      <div class="controls">
+        <input name="amount" id="amount" type="number" value="" placeholder="Amount" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="timing">Timing: *</label>
+      <div class="controls">
+        <select id="timing" name="timing" class="form-control">
+          <option value="One-Off">One-Off</option>
+          <option value="Weekly">Weekly</option>
+          <option value="Fortnightly">Fortnightly</option>
+          <option value="Monthly">Monthly</option>
+          <option value="Annually">Annually</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label" for="startDate">Start Date: *</label>
+      <div class="controls">
+        <input type="text" class="form-control" placeholder="Start Date" id="startDate" name="startDate">
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary" />
+  </form>
+</template>
