@@ -1,0 +1,18 @@
+<template name="financeItemPage">
+  {{#if ownPost}}
+    <div class="finance-item">
+      <div class="post-content">
+        <h3><a href="{{pathFor 'financeItemPage'}}">{{title}}</a> <span class="{{financeType}}">{{amount}}</span></h3>
+        <p>Type: {{financeType}}</p>
+        <p>Amount: <span class="{{financeType}}">{{amount}}</span></p>
+        <p>Timing: {{timing}}</p>
+      </div>
+
+    </div>
+    <p>
+      <a name="edit" href="{{pathFor 'financeEdit'}}">Edit</a>
+    </p>
+    {{else}}
+    You are not meant to be here!
+    {{/if}}
+</template>
