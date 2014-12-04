@@ -1,0 +1,17 @@
+<template name="financeList">
+  <div class="finance-list-income">
+    <h2>Income</h2>
+    {{#each financesIncome}}
+      {{> financeItem}}
+    {{/each}}
+  </div>
+  <div class="finance-list-expense">
+    <h2>Expense</h2>
+    {{#each financesExpense}}
+      {{> financeItem}}
+    {{/each}}
+  </div>
+  <div class="clearfix"></div>
+  <a href="{{pathFor 'financeSubmit'}}">New Entry</a>
+
+</template>
