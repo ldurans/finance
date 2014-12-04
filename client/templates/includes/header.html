@@ -1,0 +1,33 @@
+<template name="header">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{pathFor 'home'}}">Level Up Code</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav">
+        <li><a href="{{pathFor 'projects'}}">Projects</a></li>
+        {{#if currentUser}}
+          <li class="dropdown">
+            <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">Finance</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{pathFor 'financeDashboard'}}">Dashboard</a></li>
+              <li><a href="{{pathFor 'financeList'}}">Finance List</a></li>
+              <li><a href="{{pathFor 'financeSubmit'}}">New Item</a></li>
+            </ul>
+          </li>
+        {{else}}
+
+        {{/if}}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+    </div>
+  </nav>
+</template>
