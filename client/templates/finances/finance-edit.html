@@ -1,0 +1,43 @@
+<template name="financeEdit">
+  {{#if ownPost}}
+    <form class="main form">
+      <div class="form-group">
+        <label class="control-label" for="title">Title</label>
+        <div class="controls">
+          <input type="text" name="title" id="title" value="{{title}}" placeholder="Title" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="financeType">Type</label>
+        <div class="controls">
+          <select name="financeType" id="financeType" class="form-control" value="{{financeType}}">
+            <option value="Income" {{selectedTypeIncome}}>Income</option>
+            <option value="Expense" {{selectedTypeExpense}}>Expense</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="amount">Amount (£): *</label>
+        <div class="controls">
+          <input name="amount" id="amount" type="number" value="{{amount}}" placeholder="Amount" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="timing">Timing: *</label>
+        <div class="controls">
+          <select id="timing" name="timing" class="form-control">
+            <option value="One-Off" {{selectedTiming1}}>One-Off</option>
+            <option value="Weekly" {{selectedTiming2}}>Weekly</option>
+            <option value="Monthly" {{selectedTiming3}}>Monthly</option>
+            <option value="Annually" {{selectedTiming4}}>Annually</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary submit"/>
+      <hr/>
+      <a class="btn btn-danger delete" href="#">Delete post</a>
+    </form>
+    {{else}}
+    You are not meant to be here!
+    {{/if}}
+</template>
