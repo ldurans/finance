@@ -1,7 +1,7 @@
 levelupcode
 ===========
 
-My starting cms. Has all my projects in.
+My starting cms. Has all my projects in. We have a project manager, which shows on the homepage. Then, we have a section for finances, and maybe an eventual alarm clock.
 
 Requires:
 accounts-password
